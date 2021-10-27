@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.3s all linear;
+}
+body {
+  min-height: 50vh;
+}
+.listContainer {
+  padding: 1em;
+  background: lightgray;
+  min-height: 100px;
+}
+@media all and (min-width: 0) and (max-width: 767px) {
+  .listContainer {
+    max-width: 90vw;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .listContainer {
+    max-width: 60vw;
+  }
+}
+@media all and (min-width: 1024px) {
+  .listContainer {
+    max-width: 50vw;
+  }
+}
+.listContainer .clearBtn {
+  left: 65% !important;
+}
+
+.listContainer .table > :not(caption) > * > * {
+  padding: 0 !important;
+}
+.listContainer .table .taskHead,
+.listContainer .table .taskBody {
+  margin: 2rem auto !important;
+  display: block;
+}
+.listContainer .table .taskHead .taskInput::placeholder {
+  font-size: 0.75rem;
+}
+.listContainer .table .taskBody.hide,
+.listContainer .table .taskBody tr.hide {
+  opacity: 0 !important;
+  transition: opacity 0.3s linear;
+}
+.listContainer .table .taskBody > tr .taskList {
+  color: #000000;
+  font-weight: 500;
+}
+.listContainer .table .taskBody > tr:nth-child(even) .taskList {
+  background-color: #f0f0f0;
+}
+.listContainer .table .taskBody > tr:nth-child(odd) .taskList {
+  background-color: #ffffff;
+}
+.listContainer .table .taskBody tr:first-child .taskList {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
+}
+.listContainer .table .taskBody tr:last-child .taskList {
+  border-bottom-left-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+.listContainer .table .taskBody .taskList.striked {
+  text-decoration: line-through;
+  color: limegreen !important;
+  font-weight: 500;
+}
+.listContainer .table .taskBody .taskList + .delBtn {
+  background-color: lightgray;
+}
+
+.listContainer .table .taskBody .taskList + .delBtn:hover {
+  color: red;
+  transition: 0.3s all;
+}
