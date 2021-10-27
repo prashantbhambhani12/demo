@@ -27,10 +27,10 @@ body {
     max-width: 50vw;
   }
 }
+
 .listContainer .clearBtn {
   left: 65% !important;
 }
-
 .listContainer .table > :not(caption) > * > * {
   padding: 0 !important;
 }
@@ -44,8 +44,8 @@ body {
 }
 .listContainer .table .taskBody.hide,
 .listContainer .table .taskBody tr.hide {
-  opacity: 0 !important;
-  transition: opacity 0.3s linear;
+  transform: scale(0) !important;
+  transition: transform 0.3s linear;
 }
 .listContainer .table .taskBody > tr .taskList {
   color: #000000;
